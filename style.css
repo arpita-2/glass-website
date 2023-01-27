@@ -23,4 +23,13 @@ main {
     width: 60%;
     /*the glass is taking 80 view port of the site and its given 60% width*/
 
+    /*--------Now at this point glass section doest not look like a glass so now the MAGIC point comes---*/
+    /*----Adding background with rgba because rgba congtrol the opacity of the colour--*/
+
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    /*---mixing two colour and creating a gradient and controlling the opacity by 0.7 and 0.3 and 70% of it gives a glass effect*/
+
+    border-radius: 2rem;
+    /*2rem and 20px are same*/
+
 }
