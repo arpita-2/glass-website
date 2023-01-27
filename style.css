@@ -3,3 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main {
+    min-height: 100vh;
+   /*adding maximun height to a website*/
+   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+   /*adding background color an mixing colour to create a gradient effect and we are going diagonally that is why it
+   is given (to right top)*/
+
+   
+
+}
