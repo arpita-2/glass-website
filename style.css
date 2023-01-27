@@ -11,6 +11,16 @@ main {
    /*adding background color an mixing colour to create a gradient effect and we are going diagonally that is why it
    is given (to right top)*/
 
-   
+   /*------the main tag has a content which is a glass section which I need it on centre*/
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.glass {
+    min-height: 80vh;
+    background: white;
+    width: 60%;
+    /*the glass is taking 80 view port of the site and its given 60% width*/
 
 }
