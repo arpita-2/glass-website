@@ -32,4 +32,50 @@ main {
     border-radius: 2rem;
     /*2rem and 20px are same*/
 
+    z-index: 2;
+    /*z-index is 2 given to push the circle into backward of the glass. Higher the index number , highly it push
+    forward. So lower the index number if want to push circle on the back. The default is 1*/
+    backdrop-filter: blur(2rem);
+
+    /*to add a blur effect to the back side of it*/
+
+}
+
+.circle1, .circle2{
+
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    /*---mixing two colour and creating a gradient and controlling the opacity by 0.9 and 0.1*/
+
+    position: absolute;
+    /*position is absolute that means i can move this circle anywhere I can*/
+
+     /*top: 5%;*/
+     /*5% of the top portion of the screen*/
+     /*left: 10%;*/
+     /*going to pust the circle 10% to the left side*/
+     height: 12rem;
+     width: 12rem;
+     /*height and width have to put same because if height and width is different then the shape of it after 
+     putting border radius does not look round or circle*/
+     border-radius: 50%;
+     }
+
+     /*--------Now the circle one and two are present in same circle . But i want to show the two circles separetly.
+     so I have to code separetly to show two circles separetly.---*/
+
+.circle1 {
+top: 5%;
+right: 15%;
+/*Now I want it to the back side of the main menu section because it is showing now on the upward section
+of main menu*/
+
+
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+
+
 }
