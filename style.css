@@ -79,3 +79,9 @@ of main menu*/
 
 
 }
+
+img {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+  }
