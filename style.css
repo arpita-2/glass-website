@@ -11,7 +11,28 @@
     box-sizing: border-box;
 }
 
+h1 {
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+h2,
+p { color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+
+}
+
+h3{
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
 main {
+    font-family: "poppins", sans-serif;
     min-height: 100vh;
    /*adding maximun height to a website*/
    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
@@ -149,13 +170,25 @@ of main menu*/
     color: white;
     padding: 1rem;
 
+
     /*after adding this much class to third section which is pro in dashboard the border radius captures
     thw whole text with image but i want only border radius in text not in image*/
+
+    position: relative;
 }
 
 .pro img{
     position: absolute;
     /*Now the image comes out of the border radius*/
+    top: -10%;
+    right: 10%
+}
+
+.pro h2 {
+    width: 40%;
+    /*width suppressed the text vertically*/
+    color: white;
+    font-weight: 600;
 }
 
 
