@@ -1,10 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,700&display=swap');
-
-
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -32,8 +25,8 @@ h3{
 }
 
 main {
-    font-family: "poppins", sans-serif;
-    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+   
    /*adding maximun height to a website*/
    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
    /*adding background color an mixing colour to create a gradient effect and we are going diagonally that is why it
@@ -45,10 +38,14 @@ main {
    justify-content: center;
 }
 
+
+
+
+
 .glass {
-    min-height: 80vh;
+   min-height: 20vw;
     background: white;
-    width: 60%;
+    width: 70vw;
     /*the glass is taking 80 view port of the site and its given 60% width*/
 
     /*--------Now at this point glass section doest not look like a glass so now the MAGIC point comes---*/
@@ -72,7 +69,9 @@ main {
     As I know I made two divs , 1st one is for dashboard and second one is 
     games . So this flex put two different divs horizontally with their child elements*/
 
-    display: flex;
+   display: flex;
+   margin-top: 4rem;
+   margin-bottom: 6rem;
 
 }
 
@@ -81,18 +80,18 @@ main {
     background: white;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
     /*---mixing two colour and creating a gradient and controlling the opacity by 0.9 and 0.1*/
-
-    position: absolute;
-    /*position is absolute that means i can move this circle anywhere I can*/
-
-     /*top: 5%;*/
+    /*top: 5%;*/
      /*5% of the top portion of the screen*/
      /*left: 10%;*/
      /*going to pust the circle 10% to the left side*/
-     height: 12rem;
-     width: 12rem;
+     height: 15rem;
+     width: 15rem;
+
      /*height and width have to put same because if height and width is different then the shape of it after 
      putting border radius does not look round or circle*/
+
+     position: absolute;
+     /*position is absolute that means i can move this circle anywhere I can*/
      border-radius: 50%;
      }
 
@@ -100,29 +99,23 @@ main {
      so I have to code separetly to show two circles separetly.---*/
 
 .circle1 {
-top: 5%;
-right: 15%;
+top: 3%;
+right: 12%;
 /*Now I want it to the back side of the main menu section because it is showing now on the upward section
 of main menu*/
-
 
 }
 
 .circle2 {
-    bottom: 5%;
-    left: 10%;
-
+    bottom: -50%;
+    left: 7%;
 
 }
 
-/*img.profile {
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-  }*/
+
 
   .dashboard {
-    flex: 1;
+    flex: 1.5;
     /*giving flex to give a distance for the right section*/
 
     /*I dont want to show the child items horizontally so again I give flex-direction column to show it as a column
@@ -147,8 +140,8 @@ of main menu*/
 
   .link {
     display: flex;
-    margin: 2rem 0rem;
-   padding: 1rem 2rem;
+    margin: 1rem 0rem;
+   padding: 1rem 1rem;
    align-items: center;
 
   }
@@ -170,7 +163,6 @@ of main menu*/
     color: white;
     padding: 1rem;
 
-
     /*after adding this much class to third section which is pro in dashboard the border radius captures
     thw whole text with image but i want only border radius in text not in image*/
 
@@ -191,4 +183,101 @@ of main menu*/
     font-weight: 600;
 }
 
+/*--------------------GAMES--------------------------*/
+.status {
+     margin-bottom: 3rem;
+}
+.status input{
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border: none;
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 3rem;
+    
+}
+
+/*taking the entire games section which included status and cards */
+.games {
+
+    /*I dont want to show the child items horizontally so again I give flex-direction column to show it as a column
+    Why i did that????? */
+    display: flex;
+    flex-direction: column;
+
+    /*I did that because without giving display: flex property , justify-content property & align center property for the child items
+    not gonna work. It is imp to immport flex*/
+    justify-content: space-evenly;
+    /*space-evenly means equal amount of space given to each child items*/
+    
+    margin: 5rem;
+
+}
+
+.card img{
+    margin-right: 1rem;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.5)
+      );
+
+      margin-top: 2rem;
+      border-radius: 2rem;
+      padding: 1rem;
+      box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+      /*Here 6px 6px represents the x and y axis and 20px represent blur*/
+      justify-content: space-evenly;
+
+}
+
+.progress-bar {
+
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+   height: 25%;
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    /*overflow: hidden does not allow the psuedo div to leave the section*/
+    overflow: hidden;
+}
+
+/*wanna a bar which will not show the progress bar fully filled up*/
+
+.progress-bar::after {
+    /*giving a psuedo effect*/
+    content: "";
+    /*everytim have to add content with no code because Im using after psuedo element in it
+    Same goes for before psuedo element*/
+    height: 100%;
+    width: 100%;
+    background: rgba(236, 236, 236);
+    position:absolute;
+    /*So I basically created a div in this section*/
+    left:80%;
+
+    /*the div which i created is living the section. So not to leave 
+    Iam gonna add overflow hidden property*/
+
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*giving space to all the child elements in the card-info*/
+
+}
+
+.percentage {
+    font-weight: bold;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    /*background is showing mor than the percentage area so....*/
+
+-webkit-background-clip: text;
+    /*background will show only backside of the text*/
+}
 
